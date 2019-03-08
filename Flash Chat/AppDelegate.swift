@@ -6,7 +6,10 @@
 //  It recieves application level messages like did the app finish launching or did it terminate etc. 
 //
 
+// Modified by Emanuel Covaci on March 2019
+
 import UIKit
+import Firebase
 
 
 @UIApplicationMain
@@ -18,8 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         //TODO: Initialise and Configure your Firebase here:
+        FirebaseApp.configure()
         
         
+
         return true
     }
 
