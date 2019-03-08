@@ -83,6 +83,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.messageBackground.backgroundColor = UIColor.flatGray()
         }
         
+        
+        
         return cell
         
         
@@ -94,6 +96,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return messageArray.count
     }
+    
+
     
     
     
@@ -197,10 +201,12 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.messageArray.append(message)
             self.configureTableView()
             self.messageTableView.reloadData()
+            let indexPath = IndexPath(item: self.messageArray.count-1, section: 0)
+            self.messageTableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
             
         }
     }
-    
+ 
     
 
     
